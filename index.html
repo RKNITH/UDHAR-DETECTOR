@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udhar Detector</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS for styling -->
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Udhar Detector</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#rate">Rate Borrower</a></li>
+                <li><a href="#search">Search Borrower</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login">
+        <h2>User Login</h2>
+        <form id="loginForm">
+            <label for="userRole">Select Role:</label>
+            <select id="userRole" name="userRole">
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+            </select>
+
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+
+            <label for="userId">Unique ID (Leave blank if new user):</label>
+            <input type="text" id="userId" name="userId">
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Rating Input Section -->
+    <section id="rate">
+        <h2>Rate Borrower</h2>
+        <form id="rateForm">
+            <label for="borrowerName">Borrower Name:</label>
+            <input type="text" id="borrowerName" name="borrowerName" required>
+
+            <label for="borrowerId">Borrower ID:</label>
+            <input type="text" id="borrowerId" name="borrowerId" required>
+
+            <label for="rating">Rating (Points):</label>
+            <input type="number" id="rating" name="rating" required>
+
+            <button type="submit">Submit Rating</button>
+        </form>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search">
+        <h2>Search Borrower</h2>
+        <form id="searchForm">
+            <label for="searchQuery">Search by Name or ID:</label>
+            <input type="text" id="searchQuery" name="searchQuery" required>
+
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResults">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Udhar Detector. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script> <!-- Link to JavaScript file for functionality -->
+</body>
+
+</html>
